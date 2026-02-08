@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  background: #f5e9d3;
+  color: #3b2f2f;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

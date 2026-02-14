@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
 import Lenis from "@studio-freight/lenis"
+import "./styles/global.css"
 
 const lenis = new Lenis({
   duration: 1.8,         

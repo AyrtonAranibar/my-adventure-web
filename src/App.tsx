@@ -1,5 +1,9 @@
-import ChapterTitle from "./components/ChapterTitle"
+import ParallaxSection from "./components/ParallaxSection"
 import StorySection from "./components/StorySection"
+import NuestroComienzo from "./components/NuestroComienzo"
+import BackgroundMusicPlayer from "./components/BackgroundMusicPlayer"
+import NuestrasAventuras from "./components/NuestrasAventuras"
+import ActualidadSection from "./components/ActualidadSection"
 
 export default function Story() {
   return (
@@ -8,23 +12,30 @@ export default function Story() {
         scrollSnapType: "y proximity"
       }}
     >
-      <ChapterTitle title="Nuestra aventura" />
 
-      <StorySection>
-        <p>
-          Todo comenzó un día cualquiera… pero nada volvió a ser igual.
-        </p>
-      </StorySection>
+      <ParallaxSection />
 
-      <StorySection>
-        <img src="/src/assets/photos/colca1.jpg" alt="recuerdo" />
-      </StorySection>
+      <NuestroComienzo/>
 
+      <NuestrasAventuras/>
+
+      <ActualidadSection/>
+      
       <StorySection>
         <p>
           Y sin darnos cuenta, empezamos a escribir nuestra propia historia.
         </p>
       </StorySection>
+
+      <BackgroundMusicPlayer
+        tracks={[
+          "src/assets/audio/Elvinodetuboca.mp3",
+          "src/assets/audio/Manuel.mp3",
+          "src/assets/audio/TeLlevoparaQueMeLleves.mp3",
+          "src/assets/audio/Usted.mp3",
+          "src/assets/audio/LaDistanci.mp3",
+      ]}
+      />
     </main>
   )
 }

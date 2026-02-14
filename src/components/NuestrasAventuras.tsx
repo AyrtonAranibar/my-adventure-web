@@ -105,7 +105,7 @@ export default function NuestrasAventuras() {
           caption="Solo sale tu celar XD"
           zoom={1}
           depth={1.2}
-          rotation={3}
+          rotation={-1}
         />
         
         <CardPolaroid
@@ -113,7 +113,7 @@ export default function NuestrasAventuras() {
           caption="Que bonita! ❤️"
           zoom={1}
           depth={1.2}
-          rotation={-5}
+          rotation={-2}
         />
         
 
@@ -124,7 +124,7 @@ export default function NuestrasAventuras() {
           caption="Caminando juntitos :3"
           depth={1.1}
           speed={1.2}
-          rotation={-5}
+          rotation={-2}
         />
 
         <CardPolaroid
@@ -132,7 +132,7 @@ export default function NuestrasAventuras() {
           caption="Nuestra primera fiesta juntos :3"
           zoom={1}
           depth={1.2}
-          rotation={-5}
+          rotation={2}
         />
 
         <CardPolaroid
@@ -164,7 +164,7 @@ export default function NuestrasAventuras() {
           caption="Tunkimayo verdad?🤔"
           zoom={1}
           depth={1.2}
-          rotation={-5}
+          rotation={-1}
         />
 
         <CardPolaroid
@@ -188,7 +188,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250809_202850.jpg"
           caption="Abrazaditos en tu casa💖"
           zoom={1}
-          depth={1.2}
+          depth={1}
           rotation={1}
         />
 
@@ -204,7 +204,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250813_232417.jpg"
           caption="😆"
           zoom={1}
-          depth={1.2}
+          depth={0.9}
           rotation={-5}
         />
 
@@ -212,7 +212,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250817_074057.jpg"
           caption="Nuestro segundo trekking"
           zoom={1}
-          depth={1.2}
+          depth={1}
           rotation={10}
         />
 
@@ -220,7 +220,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250817_084143.jpg"
           caption="Dentro del poto del Tyson"
           zoom={1}
-          depth={1.2}
+          depth={1.3}
           rotation={-5}
         />
 
@@ -229,7 +229,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250823_230618.jpg"
           caption="🥴"
           zoom={1}
-          depth={1.2}
+          depth={1.1}
           rotation={1}
         />
 
@@ -237,7 +237,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250813_214501.jpg"
           caption="Abrazaditos en el parque💕"
           zoom={1}
-          depth={1.2}
+          depth={0.9}
           rotation={3}
         />
 
@@ -245,7 +245,7 @@ export default function NuestrasAventuras() {
           src="/src/assets/photos/20250823_230724.jpg"
           caption="😝"
           zoom={1}
-          depth={1.2}
+          depth={1}
           rotation={-5}
         />
 

@@ -1,5 +1,4 @@
 import ParallaxSection from "./components/ParallaxSection"
-import StorySection from "./components/StorySection"
 import NuestroComienzo from "./components/NuestroComienzo"
 import BackgroundMusicPlayer from "./components/BackgroundMusicPlayer"
 import NuestrasAventuras from "./components/NuestrasAventuras"
@@ -20,12 +19,6 @@ export default function Story() {
       <NuestrasAventuras/>
 
       <ActualidadSection/>
-      
-      <StorySection>
-        <p>
-          Y sin darnos cuenta, empezamos a escribir nuestra propia historia.
-        </p>
-      </StorySection>
 
       <BackgroundMusicPlayer
         tracks={[

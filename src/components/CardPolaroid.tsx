@@ -92,7 +92,7 @@ export default function CardPolaroid({
             textAlign: "center"
           }}
         >
-          {caption} {isTouch ? "¡Tócame!" : ""}
+          {caption} 
         </p>
       )}
 

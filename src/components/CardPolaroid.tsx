@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import {
   formatDateFromFilename,
   getFinalRotation,
@@ -29,10 +29,17 @@ export default function CardPolaroid({
 }: CardPolaroidProps) {
 
   const ref = useRef<HTMLDivElement>(null)
+  const [scaled, setScaled] = useState(false)
 
   const autoDate = formatDateFromFilename(src)
   const finalRotation = getFinalRotation(src, rotation)
   const { y, opacity } = usePolaroidScroll(ref, speed)
+
+  const isTouch = typeof window !== "undefined" && "ontouchstart" in window
+
+  const handleToggle = () => {
+    setScaled(!scaled)
+  }
 
   return (
     <motion.div
@@ -51,7 +58,9 @@ export default function CardPolaroid({
         rotate: `${finalRotation}deg`,
         y
       }}
-      whileHover={{ scale: 1.5 }}
+      whileHover={!isTouch ? { scale: 1.5 } : undefined}
+      animate={{ scale: scaled ? 1.5 : 1 }}
+      onClick={isTouch ? handleToggle : undefined}
       transition={{ type: "spring", stiffness: 120, damping: 12 }}
     >
       <div
@@ -83,7 +92,7 @@ export default function CardPolaroid({
             textAlign: "center"
           }}
         >
-          {caption}
+          {caption} 
         </p>
       )}
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import {
   formatDateFromFilename,
   getFinalRotation,
@@ -32,10 +32,26 @@ export default function CardPolaroidVideo({
 
   const ref = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [flipped, setFlipped] = useState(false)
 
   const autoDate = formatDateFromFilename(src)
   const finalRotation = getFinalRotation(src, rotation)
   const { y, opacity } = usePolaroidScroll(ref, speed)
+
+  // Detectar si es touch
+  const isTouch = typeof window !== "undefined" && "ontouchstart" in window
+
+  const handleFlip = () => {
+    setFlipped(!flipped)
+    if (!flipped) {
+      videoRef.current?.play()
+    } else {
+      if (videoRef.current) {
+        videoRef.current.pause()
+        videoRef.current.currentTime = 0
+      }
+    }
+  }
 
   return (
     <div
@@ -48,14 +64,16 @@ export default function CardPolaroidVideo({
       <motion.div
         ref={ref}
         initial={{ rotateY: 0 }}
-        whileHover={{ rotateY: 180, scale: 1.5}}
-        onHoverStart={() => videoRef.current?.play()}
-        onHoverEnd={() => {
+        animate={{ rotateY: flipped ? 180 : 0, scale: flipped ? 1.5 : 1 }}
+        whileHover={!isTouch ? { rotateY: 180, scale: 1.5 } : undefined}
+        onHoverStart={!isTouch ? () => videoRef.current?.play() : undefined}
+        onHoverEnd={!isTouch ? () => {
           if (videoRef.current) {
             videoRef.current.pause()
             videoRef.current.currentTime = 0
           }
-        }}
+        } : undefined}
+        onClick={isTouch ? handleFlip : undefined}
         transition={{
           rotateY: { duration: 0.8, ease: "easeInOut" }
         }}
@@ -82,7 +100,6 @@ export default function CardPolaroidVideo({
             boxShadow: "0 15px 35px rgba(0,0,0,0.25)",
             borderRadius: "4px",
             backfaceVisibility: "hidden",
-            overflow: "",
             zIndex:5
           }}
         >
@@ -115,7 +132,7 @@ export default function CardPolaroidVideo({
                 textAlign: "center"
               }}
             >
-              {caption} ¡Hazme clic! 
+              {caption} {isTouch ? "¡Tócame!" : "¡Hazme clic!"}
             </p>
           )}
 
@@ -133,16 +150,16 @@ export default function CardPolaroidVideo({
               {date ?? autoDate}
             </span>
           )}
-            <span   
+          <span   
             style={{
-                position:"absolute",
-                top:"0%",
-                left:"5%",
-                transform:  "translate(-50%, -50%)",
-                zIndex:10,
-                fontSize: "5rem"
+              position:"absolute",
+              top:"0%",
+              left:"5%",
+              transform:  "translate(-50%, -50%)",
+              zIndex:10,
+              fontSize: "5rem"
             }}
-        >📽️</span>
+          >📽️</span>
         </div>
 
         {/* BACK */}

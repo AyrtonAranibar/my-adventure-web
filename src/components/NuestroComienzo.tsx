@@ -11,28 +11,28 @@ export default function NuestroComienzo() {
     offset: ["start end", "end start"]
   })
 
-
   const y = useTransform(scrollYProgress, [0, 1], [80, -80])
+  const base = import.meta.env.BASE_URL  // 👈 prefijo dinámico
 
   return (
     <section
-        ref={ref}
-        style={{
-            minHeight: "120vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-start", 
-            position: "relative",
-            padding: "6rem 2rem 4rem",
-        }}
+      ref={ref}
+      style={{
+        minHeight: "120vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start", 
+        position: "relative",
+        padding: "6rem 2rem 4rem",
+      }}
     >
       <motion.h2
-          style={{
-            fontFamily: "'Caveat', cursive",
-            fontSize: "6rem",
-            marginBottom: "10rem",
-            textAlign: "center",
+        style={{
+          fontFamily: "'Caveat', cursive",
+          fontSize: "6rem",
+          marginBottom: "10rem",
+          textAlign: "center",
         }}
       >
         Nuestro comienzo
@@ -48,7 +48,7 @@ export default function NuestroComienzo() {
         }}
       >
         <CardPolaroid
-          src="/assets/photos/20250424.jpg"
+          src={`${base}assets/photos/20250424.jpg`}
           caption="El primer día que nos conocimos... Henry nos presentó y comenzamos hablando por Instagram 📷"
           zoom={1.1}
           rotation={-4}
@@ -57,8 +57,8 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroidVideo
-          src="/assets/photos/20250524.png"
-          videoSrc="/assets/videos/20250524.mp4"
+          src={`${base}assets/photos/20250524.png`}
+          videoSrc={`${base}assets/videos/20250524.mp4`}
           caption="Comenzamos a compartir el voley con amigos 🏆"
           depth={1.1}
           speed={1.2}
@@ -66,8 +66,8 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroidVideo
-          src="/assets/photos/20250530.png"
-          videoSrc="/assets/videos/20250530.mp4"
+          src={`${base}assets/photos/20250530.png`}
+          videoSrc={`${base}assets/videos/20250530.mp4`}
           caption="Tambien compartimos historias...😽"
           depth={1.1}
           speed={1.2}
@@ -75,7 +75,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250525.jpg"
+          src={`${base}assets/photos/20250525.jpg`}
           caption="Black 🐕⚰️"
           zoom={1.15}
           rotation={3}
@@ -84,7 +84,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250617.jpg"
+          src={`${base}assets/photos/20250617.jpg`}
           caption="Te acompañaba hasta tu casa, un dia vimos este gato :b"
           zoom={1.15}
           rotation={3}
@@ -93,7 +93,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250618.jpg"
+          src={`${base}assets/photos/20250618.jpg`}
           caption="Gato disque 'Perdido' pero siempre vivia ahí"
           zoom={1.15}
           rotation={3}
@@ -102,7 +102,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250624.jpg"
+          src={`${base}assets/photos/20250624.jpg`}
           caption="Vimos a chimuelo en el cine 🎞️"
           zoom={1}
           depth={1}
@@ -110,7 +110,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250625.jpg"
+          src={`${base}assets/photos/20250625.jpg`}
           caption="Nos divertiamos con los chicos del voley n.n"
           zoom={1}
           depth={1}
@@ -118,7 +118,7 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroid
-          src="/assets/photos/20250628.jpg"
+          src={`${base}assets/photos/20250628.jpg`}
           caption="Este día marco un antes y despues en nuestra historia..."
           zoom={1}
           rotation={5}
@@ -127,15 +127,16 @@ export default function NuestroComienzo() {
         />
 
         <CardPolaroidVideo
-          src="/assets/photos/20250706_174407.jpg"
-          videoSrc="/assets/videos/20250706.mp4"
+          src={`${base}assets/photos/20250706_174407.jpg`}
+          videoSrc={`${base}assets/videos/20250706.mp4`}
           caption="Dejamos de vernos como amigos y comenzamos a conectar de verdad ❤️"
           depth={1.1}
           speed={1.2}
           rotation={-5}
         />
+
         <CardPolaroid
-          src="/assets/photos/20250712_211125.jpg"
+          src={`${base}assets/photos/20250712_211125.jpg`}
           caption="Comenzabamos a ver peliculas juntos, eso era cuando las peliculas no nos veía a nosotros 😂"
           zoom={1.05}
           depth={1.1}

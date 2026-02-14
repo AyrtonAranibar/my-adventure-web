@@ -31,7 +31,7 @@ export default function ParallaxSection() {
         >
             {/* Fondo */}
             <motion.img
-                src="/src/assets/photos/fondoportada.jpg"
+                src="/assets/photos/fondoportada.jpg"
                 style={{
                     y: yBack,
                     position: "absolute",
@@ -45,7 +45,7 @@ export default function ParallaxSection() {
 
             {/* Capa media */}
             <motion.img
-                src="/src/assets/photos/portada2.png"
+                src="/assets/photos/portada2.png"
                 style={{
                     y: yMiddle,
                     position: "absolute",
@@ -59,7 +59,7 @@ export default function ParallaxSection() {
 
             {/* Capa frontal       */}
             <motion.img
-                src="/src/assets/photos/portada1.png"
+                src="/assets/photos/portada1.png"
                 style={{
                     y: yFront,
                     position: "absolute",

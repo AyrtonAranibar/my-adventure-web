@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import CardPolaroid from "./CardPolaroid"
 import CardPolaroidVideo from "./CardPolaroidVideo"
+import HeartBackground from "./HeartBackground"
 
 export default function ActualidadSection() {
   const ref = useRef(null)
@@ -12,7 +13,7 @@ export default function ActualidadSection() {
   })
 
   const y = useTransform(scrollYProgress, [0, 1], [80, -80])
-  const base = import.meta.env.BASE_URL  // 👈 prefijo dinámico
+  const base = import.meta.env.BASE_URL  
 
   return (
     <section
@@ -27,6 +28,8 @@ export default function ActualidadSection() {
         padding: "6rem 2rem 4rem",
       }}
     >
+
+      <HeartBackground count={10} />
       <motion.h2
         style={{
           fontFamily: "'Caveat', cursive",
@@ -53,7 +56,7 @@ export default function ActualidadSection() {
           zoom={1.1}
           rotation={-4}
           depth={1.2}
-          speed={1.1}
+          speed={1.4}
         />
 
         <CardPolaroid
@@ -62,7 +65,7 @@ export default function ActualidadSection() {
           zoom={1.1}
           rotation={0}
           depth={1.2}
-          speed={1.1}
+          speed={1.4}
         />
 
         <CardPolaroid
@@ -71,7 +74,7 @@ export default function ActualidadSection() {
           zoom={1.1}
           rotation={-1}
           depth={1.2}
-          speed={1.1}
+          speed={1.4}
         />
 
         <CardPolaroid
@@ -79,8 +82,7 @@ export default function ActualidadSection() {
           caption="Y queda debajo un amor mas real entre nosotros"
           zoom={1.1}
           rotation={-3}
-          depth={1.2}
-          speed={1.1}
+          depth={1}
         />
 
         <CardPolaroid
@@ -88,8 +90,8 @@ export default function ActualidadSection() {
           caption="Te quiero mucho cariño 💖"
           zoom={1.1}
           rotation={4}
-          depth={1.2}
-          speed={1.1}
+          depth={1.4}
+          speed={1.4}
         />
 
         <CardPolaroid
@@ -97,8 +99,8 @@ export default function ActualidadSection() {
           caption="Aun nos deparan muchisimas aventuras más!"
           zoom={1.1}
           rotation={-1}
-          depth={1.2}
-          speed={1.1}
+          depth={0.9}
+          speed={0.9}
         />
 
         <CardPolaroid
@@ -106,8 +108,8 @@ export default function ActualidadSection() {
           caption="Y espero que sean siempre contigo bb"
           zoom={1.1}
           rotation={3}
-          depth={1.2}
-          speed={1.1}
+          depth={1}
+          speed={1}
         />
 
         <CardPolaroid
@@ -115,16 +117,16 @@ export default function ActualidadSection() {
           caption="Te preparé esto con mucho cariño 😄"
           zoom={1.1}
           rotation={-4}
-          depth={1.2}
-          speed={1.1}
+          depth={1.4}
+          speed={1.4}
         />
 
         <CardPolaroidVideo
           src={`${base}assets/photos/20251115_191843.jpg`}
           videoSrc={`${base}assets/videos/20251115_191843.mp4`}
           caption="Espero que te guste mucho :D"
-          depth={1.1}
-          speed={1.2}
+          depth={1}
+          speed={1}
           rotation={-1}
         />
       </motion.div>

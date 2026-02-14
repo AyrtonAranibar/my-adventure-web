@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import CardPolaroid from "./CardPolaroid"
 import CardPolaroidVideo from "./CardPolaroidVideo"
+import HeartBackground from "./HeartBackground"
 
 export default function NuestroComienzo() {
   const ref = useRef(null)
@@ -18,7 +19,7 @@ export default function NuestroComienzo() {
     <section
       ref={ref}
       style={{
-        minHeight: "120vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -27,6 +28,8 @@ export default function NuestroComienzo() {
         padding: "6rem 2rem 4rem",
       }}
     >
+      <HeartBackground count={10} />
+      
       <motion.h2
         style={{
           fontFamily: "'Caveat', cursive",
@@ -79,8 +82,8 @@ export default function NuestroComienzo() {
           caption="Black 🐕⚰️"
           zoom={1.15}
           rotation={3}
-          depth={1}
-          speed={1}
+          depth={1.2}
+          speed={1.2}
         />
 
         <CardPolaroid
@@ -88,8 +91,8 @@ export default function NuestroComienzo() {
           caption="Te acompañaba hasta tu casa, un dia vimos este gato :b"
           zoom={1.15}
           rotation={3}
-          depth={1}
-          speed={1}
+          depth={1.3}
+          speed={1.3}
         />
 
         <CardPolaroid
@@ -104,8 +107,8 @@ export default function NuestroComienzo() {
         <CardPolaroid
           src={`${base}assets/photos/20250624.jpg`}
           caption="Vimos a chimuelo en el cine 🎞️"
-          zoom={1}
-          depth={1}
+          zoom={1.1}
+          depth={1.1}
           speed={1}
         />
 
@@ -122,16 +125,16 @@ export default function NuestroComienzo() {
           caption="Este día marco un antes y despues en nuestra historia..."
           zoom={1}
           rotation={5}
-          depth={1}
-          speed={1}
+          depth={0.8}
+          speed={0.8}
         />
 
         <CardPolaroidVideo
           src={`${base}assets/photos/20250706_174407.jpg`}
           videoSrc={`${base}assets/videos/20250706.mp4`}
           caption="Dejamos de vernos como amigos y comenzamos a conectar de verdad ❤️"
-          depth={1.1}
-          speed={1.2}
+          depth={1.2}
+          speed={1.3}
           rotation={-5}
         />
 
@@ -139,8 +142,8 @@ export default function NuestroComienzo() {
           src={`${base}assets/photos/20250712_211125.jpg`}
           caption="Comenzabamos a ver peliculas juntos, eso era cuando las peliculas no nos veía a nosotros 😂"
           zoom={1.05}
-          depth={1.1}
-          speed={1.5}
+          depth={1}
+          speed={1}
         />
       </motion.div>
     </section>

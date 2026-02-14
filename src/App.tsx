@@ -8,8 +8,7 @@ import manuel from "/assets/audio/Manuel.mp3";
 import TeLlevoparaQueMeLleves from "/assets/audio/TeLlevoparaQueMeLleves.mp3";
 import Usted from "/assets/audio/Usted.mp3";
 import LaDistanci from "/assets/audio/LaDistanci.mp3";
-
-
+import VideoSection from "./components/VideoSection"
 
 export default function Story() {
   return (
@@ -19,11 +18,14 @@ export default function Story() {
       }}
     >
 
+
       <ParallaxSection />
 
       <NuestroComienzo/>
 
       <NuestrasAventuras/>
+
+      <VideoSection/>
 
       <ActualidadSection/>
 

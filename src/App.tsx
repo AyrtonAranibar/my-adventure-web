@@ -22,11 +22,11 @@ export default function Story() {
 
       <BackgroundMusicPlayer
         tracks={[
-          "https://github.com/AyrtonAranibar/my-adventure-web/raw/refs/heads/master/src/assets/audio/Elvinodetuboca.mp3",
-          "https://github.com/AyrtonAranibar/my-adventure-web/raw/refs/heads/master/src/assets/audio/Manuel.mp3",
-          "https://github.com/AyrtonAranibar/my-adventure-web/raw/refs/heads/master/src/assets/audio/TeLlevoparaQueMeLleves.mp3",
-          "https://github.com/AyrtonAranibar/my-adventure-web/raw/refs/heads/master/src/assets/audio/Usted.mp3",
-          "https://github.com/AyrtonAranibar/my-adventure-web/raw/refs/heads/master/src/assets/audio/LaDistanci.mp3",
+          "/assets/audio/Elvinodetuboca.mp3",
+          "/assets/audio/Manuel.mp3",
+          "/assets/audio/TeLlevoparaQueMeLleves.mp3",
+          "/assets/audio/Usted.mp3",
+          "/assets/audio/LaDistanci.mp3",
       ]}
       />
     </main>

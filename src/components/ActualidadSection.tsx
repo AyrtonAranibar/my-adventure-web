@@ -48,7 +48,7 @@ export default function ActualidadSection() {
         }}
       >
         <CardPolaroid
-          src="/src/assets/photos/20251203_225554.jpg"
+          src="/assets/photos/20251203_225554.jpg"
           caption="Las cosas estan más calmadas"
           zoom={1.1}
           rotation={-4}
@@ -57,7 +57,7 @@ export default function ActualidadSection() {
         />
 
         <CardPolaroid
-          src="/src/assets/photos/20251213_233411.jpg"
+          src="/assets/photos/20251213_233411.jpg"
           caption="Pero tambien más estables"
           zoom={1.1}
           rotation={0}
@@ -66,7 +66,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20251224_202637.jpg"
+          src="/assets/photos/20251224_202637.jpg"
           caption="El impulso del deseo está quedando atrás"
           zoom={1.1}
           rotation={-1}
@@ -75,7 +75,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20251228_210400.jpg"
+          src="/assets/photos/20251228_210400.jpg"
           caption="Y queda debajo un amor mas real entre nosotros"
           zoom={1.1}
           rotation={-3}
@@ -84,7 +84,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20260101_030048.jpg"
+          src="/assets/photos/20260101_030048.jpg"
           caption="Te quiero mucho cariño 💖"
           zoom={1.1}
           rotation={4}
@@ -93,7 +93,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20260115_210505.jpg"
+          src="/assets/photos/20260115_210505.jpg"
           caption="Aun nos deparan muchisimas aventuras más!"
           zoom={1.1}
           rotation={-1}
@@ -102,7 +102,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20260128_222637.jpg"
+          src="/assets/photos/20260128_222637.jpg"
           caption="Y espero que sean siempre contigo bb"
           zoom={1.1}
           rotation={3}
@@ -111,7 +111,7 @@ export default function ActualidadSection() {
         />
 
                 <CardPolaroid
-          src="/src/assets/photos/20260208_185239.jpg"
+          src="/assets/photos/20260208_185239.jpg"
           caption="Te preparé esto con mucho cariño 😄"
           zoom={1.1}
           rotation={-4}
@@ -121,8 +121,8 @@ export default function ActualidadSection() {
 
 
         <CardPolaroidVideo
-          src="/src/assets/photos/20251115_191843.jpg"
-          videoSrc="/src/assets/videos/20251115_191843.mp4"
+          src="/assets/photos/20251115_191843.jpg"
+          videoSrc="/assets/videos/20251115_191843.mp4"
           caption="Espero que te guste mucho :D"
           depth={1.1}
           speed={1.2}
